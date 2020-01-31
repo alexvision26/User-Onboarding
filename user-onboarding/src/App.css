@@ -1,0 +1,76 @@
+.container {
+  margin: 0 auto;
+  width: 100%;
+}
+
+* {
+  /* border: .1px solid grey; */
+}
+
+.title {
+  text-align: center;
+  width: 100%;
+  background-color: #43516c;
+}
+
+h1 {
+  color: white;
+  padding: 1% 0;
+  margin: 0;
+}
+
+Form {
+  display:flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #dad7ce;
+  height: 100%;
+  padding: 1% 0;
+}
+
+Form div {
+  margin: .5%;
+}
+
+.tos-form {
+  display: flex;
+  white-space: nowrap;
+  justify-content: center;
+  width: 25%;
+  margin: 1% auto;
+}
+
+.tos-form input {
+  width: 15%;
+}
+
+p {
+  margin: 0;
+}
+
+input {
+  width: 100%;
+}
+
+.user-input {
+  width: 100%;
+}
+
+.user-card {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: beige;
+  text-align: center;
+  width: 30%;
+  border: .2px solid rgb(172, 172, 116);
+  margin: 1.5%;
+}
+
+.cards {
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
