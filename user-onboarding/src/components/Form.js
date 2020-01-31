@@ -19,9 +19,15 @@ const UserForm = ({values, errors, touched, status}) => {
     }, [status])
 
     return (
-        <div>
+<>
+        <div className='title'>
+            <h1>Team Sign Up!</h1>
+            </div>
+
+        <div className='user-input'>
             <Form>
-                <label htmlFor='name'>Name: </label>
+                <div className='name-form'>
+                <label htmlFor='name'>Name: </label><br/>
                 <Field
                 id='name'
                 type='text'
@@ -30,8 +36,10 @@ const UserForm = ({values, errors, touched, status}) => {
                 {touched.name && errors.name && (
                     <p>{errors.name}</p>
                 )}
+                </div>
                 
-                <label htmlFor='email'>Email: </label>
+                <div className='email-form'>
+                <label htmlFor='email'>Email: </label><br/>
                 <Field
                 id='email'
                 type='email'
@@ -40,8 +48,10 @@ const UserForm = ({values, errors, touched, status}) => {
                 {touched.email && errors.email && (
                     <p>{errors.email}</p>
                 )}
+                </div>
 
-                <label htmlFor='password'>Password: </label>
+                <div className='pass-form'>
+                <label htmlFor='password'>Password: </label><br/>
                 <Field
                 id='password'
                 type='password'
@@ -50,31 +60,36 @@ const UserForm = ({values, errors, touched, status}) => {
                 {errors.password && (
                     <p>{errors.password}</p>
                 )}
+                </div>
 
-                <label htmlFor='tos'>I agree to the Terms of Service: </label>
+                <div className='tos-form'>
+                <label htmlFor='tos'>Agree to Terms: </label>
                 <Field
                 id='tos'
                 type='checkbox'
                 name='tos'
                 checked={values.tos}
-                /><br/>
+                />
                 {touched.tos && errors.tos && (
                     <p>{errors.tos}</p>
                 )}
+                </div>
 
-                <button type='submit'>Submit</button>
+                <button type='submit'>Sign Up</button>
                 
             </Form>
-
-            {newUser.map(user => {
-                return (
-                    <ul>
-                        <h3>Welcome, {user.name}!</h3>
-                        <li>Email: {user.email}</li>
-                    </ul>
-                )
-            })}
         </div>
+        <div className='cards'>
+        {newUser.map(user => {
+                    return (
+                        <div className='user-card'>
+                            <h3>Welcome, {user.name}!</h3>
+                            <h5>Email: {user.email}</h5>
+                        </div>
+                    )
+                })}
+                </div>
+        </>
     )
 }
 
